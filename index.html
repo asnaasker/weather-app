@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">                                                                      
+</head>
+
+<body>
+
+    <div class="container">
+<header>
+    <h1>Weather Dashboard</h1>
+    <button id="themeBtn">🌙 Dark MOde</button>
+</header>
+
+
+<section class="search-section">
+    <h2>Check Your City's Weather</h2>
+
+    <form id="searchForm">
+        <input 
+        type="text"
+        id="city"
+        placeholder="Enter city name..." required>
+
+        <button type="submit">Search</button>
+
+    </form>
+</section>
+
+<p id="loading" class="loading" hidden>Loading Weather...</p>
+<p id="errorMsg" class="error" hidden></p>
+
+<section id="weatherSection" hidden>
+<div class="weather-card">
+    <h2 id="cityName">City Name</h2>
+
+    <p id="weatherDescription">Weather Condition</p>
+    <h1 id="temperature">--°C</h1>
+
+    <div class="weather-details">
+
+        <p>Feels Like: <span id="feelsLike">--</span></p>
+        <p>Humidity: <span id="humidity">--</span></p>
+        <p>Wind Speed: <span id="windSpeed">--</span></p>
+    </div>
+
+    <button id="favoriteBtn"> Add to Favorites ♡</button>
+</div>
+ <div class="forecast-section">
+<h2>5-Day Forecast</h2>
+         <div id="forecastContainer" class="forecast-container">
+                </div>
+ </div>
+</section>
+
+ <section class="favorites-section">
+ <h2>Favorite Cities</h2>
+<div id="favoritesList">
+                <p>No favorite cities yet.</p>
+    </div>
+
+    </section>
+    </div>
+    
+ <script src="script.js"></script>
+
+</body>
+</html>

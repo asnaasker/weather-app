@@ -1,0 +1,266 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgba(2, 34, 66, 0.97);
+    color: rgba(255, 255, 255, 0.77);
+}
+
+
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+#themeBtn {
+    padding: 10px 15px;
+    background-color: rgba(0, 170, 255, 0.579);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+.search-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-section h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+#searchForm {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#searchForm input {
+    padding: 12px;
+    width: 60%;
+    max-width: 400px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+#searchForm button {
+    padding: 12px 20px;
+    background-color: rgba(0, 170, 255, 0.579);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+.weather-card {
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.weather-card h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.weather-card h1 {
+    font-size: 55px;
+    margin: 15px 0;
+}
+
+
+
+.weather-details {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.weather-details p {
+    font-size: 15px;
+}
+
+
+
+#favoriteBtn {
+    padding: 12px 20px;
+    background-color: #1684d87b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+.forecast-section {
+    margin-bottom: 30px;
+    color: white;
+}
+
+.forecast-section h2 {
+    margin-bottom: 15px;
+}
+
+.forecast-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.forecast-card {
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+}
+
+.forecast-card h3 {
+    margin-bottom: 10px;
+}
+
+.forecast-card p {
+    margin: 8px 0;
+    text-transform: capitalize;
+}
+
+
+.favorites-section {
+    color: white;
+    margin-top: 30px;
+}
+
+.favorites-section h2 {
+    margin-bottom: 15px;
+}
+
+#favoritesList {
+    background-color: rgba(255, 255, 255, 0.166);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+
+
+.loading {
+    text-align: center;
+    color: white;
+    margin: 20px;
+}
+
+
+
+.error {
+    text-align: center;
+    color: #ff6b6b;
+    margin: 20px;
+}
+
+
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    #searchForm {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #searchForm input {
+        width: 100%;
+    }
+
+    #searchForm button {
+        width: 100%;
+    }
+
+    .weather-details {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .forecast-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+
+
+body.light-mode {
+    background-color: azure;
+    color: rgba(0, 0, 0, 0.938);
+}
+
+body.light-mode header h1,
+body.light-mode .search-section h2,
+body.light-mode .forecast-section,
+body.light-mode .favorites-section,
+body.light-mode .loading {
+    color: rgba(0, 0, 0, 0.984);
+}
+
+body.light-mode .weather-card,
+body.light-mode .forecast-card {
+    background-color:rgba(0, 0, 255, 0.134);
+    color: rgba(0, 0, 0, 0.608);
+}
+
+body.light-mode .weather-card h1,
+body.light-mode .weather-card h2,
+body.light-mode .forecast-card h3,
+body.light-mode .forecast-card p {
+    color: rgba(0, 0, 0, 0.944);
+}
+
+body.light-mode #favoritesList {
+    background-color:white;
+    color: rgba(0, 0, 0, 0.901);
+}
